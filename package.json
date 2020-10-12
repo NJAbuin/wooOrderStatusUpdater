@@ -1,0 +1,23 @@
+{
+  "name": "wooorderstatusupdater",
+  "version": "1.0.0",
+  "description": "woocommerce order status updater server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NJAbuin/wooOrderStatusUpdater.git"
+  },
+  "author": "Juli Budin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NJAbuin/wooOrderStatusUpdater/issues"
+  },
+  "homepage": "https://github.com/NJAbuin/wooOrderStatusUpdater#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}
