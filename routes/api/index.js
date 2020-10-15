@@ -2,11 +2,17 @@ const api = require("express").Router();
 const axios = require("axios");
 require("dotenv").config();
 
-const { refreshZohoAccessToken } = require("../../utils/zoho");
+const { refreshZohoAccessToken, fetchPackages } = require("../../utils/zoho");
 
-api.get("/update_packaged_orders", async (req, res) => {
-  const zohoAccessToken = await refreshZohoAccessToken();
-  console.log(response);
+api.get("/update_packaged_order/:zohoId", async (req, res) => {
+  try {
+    const zohoAccessToken = await refreshZohoAccessToken();
+    const packages = await fetchPackages(zohoAccessToken, req.params.zohoId);
+    console.log(packages);
+    res.send(packages);
+  } catch (error) {
+    res.send(error);
+  }
 
   const config = {
     method: "put",
