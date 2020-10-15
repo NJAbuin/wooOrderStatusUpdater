@@ -12,5 +12,5 @@ app.use(morgan("tiny"));
 app.use("/api", require("./routes/api"));
 
 app.listen(port, () =>
-console.log(chalk.black.bgWhite.bold(`Listening on port ${port}`))
+    console.log(chalk.black.bgWhite.bold(`Listening on port ${port}`))
 );
